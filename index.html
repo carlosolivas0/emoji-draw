@@ -1,0 +1,55 @@
+<body></body>
+<script src="https://cdn.jsdelivr.net/gh/netizenorg/netnet-standard-library/build/nn.min.js"></script>
+<script>
+/* global nn */ 
+
+  function draw () {
+    // let x = nn.random(700)
+    // let y = nn.random(650)
+    if (!nn.mouseDown) return
+    let x = nn.mouseX
+    let y = nn.mouseY
+    let z = nn.random(1,5)
+    let hue = nn.random(360)
+    nn.create('a-box')
+      .content('😀')
+      .position(x,y)
+      .scale(z)
+      .hueRotate(hue)
+      .rotate(nn.random(360))
+      .addTo('body')
+  }
+  // for (let i = 0; i < 400; i++) {
+  //   draw()
+  //   i += 1
+  // }
+  nn.on('mousemove',draw)
+  
+  
+  // nn.times(100,draw)
+// function draw(content,pos,scale,huerotation,rotate) {
+//   nn.create('a-box')
+//   .content(content)
+//   .position(pos)
+//   .scale(scale)
+//   .hueRotate(huerotation)
+//   .rotate(rotate)
+//   .addTo('body')
+// }
+// draw("Hi", (200, 300), 5, 24, 180)
+// nn.create('a-box')
+//   .content("😀")
+//   .position(350,330)
+//   .scale(5)
+//   .hueRotate(-90)
+//   .addTo('body')
+  
+// nn.create('a-box')
+//   .content("😭")
+//   .position(350,430)
+//   .scale(5)
+//   .hueRotate(90)
+//   .rotate(180)
+//   .addTo('body')
+
+</script>
